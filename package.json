@@ -10,6 +10,8 @@
   },
   "scripts": {
     "build": "tsc"
-  }
+  },
+  "main": "dist/PluginSystem.js",
+  "types": "dist/PluginSystem.d.ts"
 
 }
