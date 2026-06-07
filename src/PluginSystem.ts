@@ -6,10 +6,10 @@ export interface ServerPlugin {
     readonly guid: string;
 }
 
-export const plugins: ServerPlugin[] = [];
+export const plugins: (new() => ServerPlugin)[] = [];
 
 export function Plugin() {
-    return function(target: ServerPlugin){
+    return function(target: new() => ServerPlugin){
         plugins.push(target);
     }
 }
