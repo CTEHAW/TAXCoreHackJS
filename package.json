@@ -1,6 +1,6 @@
 {
   "name": "@taxcore/hackjs",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "packageManager": "yarn@4.6.0",
   "publishConfig": {
     "access": "public"
