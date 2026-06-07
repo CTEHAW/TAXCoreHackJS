@@ -8,6 +8,7 @@ export interface ServerPlugin {
 
 export const plugins: ServerPlugin[] = [];
 
-export function Plugin(target: ServerPlugin) {
-    plugins.push(target)
+export function Plugin(target: new() => ServerPlugin) {
+    const ins = new target();
+    plugins.push(ins);
 }
